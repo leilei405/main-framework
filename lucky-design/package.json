@@ -1,16 +1,15 @@
 {
-  "name": "lucky-site-main",
+  "name": "lucky-design",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 8080 --open",
+    "dev": "vite --port 3333 --open",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "garfish": "^1.19.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

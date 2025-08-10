@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   base: "http://localhost:3333/",
   server: {
-    port: 3000,
+    port: 8080,
     cors: true,
     origin: "http://localhost:3333",
   },

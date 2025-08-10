@@ -1,0 +1,26 @@
+// @import "tailwindcss";
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+/**
+ * 下划线开头的文件解释
+ * Partials 最简单的理解就是它只能被 import
+ * 不能被单独的编译成 css 文件。
+ * 这是针对一次编译多个文件来说的，可以试一下
+ * 一个文件夹两个 scss 文件，一个 root.scss,一个 _vars.scss。
+ */
+
+ /** 全局变量 */
+@import "variables";
+
+ /** 全局样式 */
+@import "reboot";
+
+ /** 全局混合 */
+@import "mixins";
+
+ /** 全局动画 */
+@import "animation";
+
+/** Button */
+@import "../pc-components/Button/style";

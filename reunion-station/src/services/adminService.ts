@@ -11,7 +11,6 @@ import type { MissingChild } from "@/types/missingChild";
 
 class AdminService {
   private baseURL = "http://localhost:3001/api";
-
   async getStats(token: string): Promise<AdminStats> {
     try {
       const response = await fetch(`${this.baseURL}/admin/stats`, {

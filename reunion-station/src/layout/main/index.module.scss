@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    padding: 50px 2% 50px 2%;
+    
+    width: calc(100% - 4%);
+    margin: 0 auto;
+    height: calc(100vh - 60px);
+}
+
+.left {
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.right {
+    flex: 1;
+    margin-left: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}

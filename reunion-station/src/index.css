@@ -1,0 +1,71 @@
+@import 'antd/dist/reset.css';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.header {
+  background: #fff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 0 24px;
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      
+      .logo-text {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1890ff;
+      }
+    }
+    
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      
+      .notification-btn {
+        color: #666;
+        
+        &:hover {
+          color: #1890ff;
+        }
+      }
+      
+      .user-avatar {
+        background-color: #1890ff;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 16px;
+    
+    .header-content {
+      .logo {
+        .logo-text {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

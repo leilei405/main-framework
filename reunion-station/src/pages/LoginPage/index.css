@@ -1,0 +1,49 @@
+.login-page, .register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  
+  .login-card, .register-card {
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+}
+
+.home-page {
+  .hero-section {
+    text-align: center;
+    padding: 48px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px;
+    margin-bottom: 32px;
+  }
+  
+  .recent-items, .success-cases {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-page, .register-page {
+    padding: 16px;
+    
+    .login-card, .register-card {
+      margin: 0;
+    }
+  }
+  
+  .home-page {
+    .hero-section {
+      padding: 32px 16px;
+    }
+  }
+}

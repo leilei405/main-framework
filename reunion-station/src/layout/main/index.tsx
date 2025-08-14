@@ -106,16 +106,17 @@ const MainContentPage = () => {
   };
   return (
     <div className={styles.container}>
-      <Menu
-        theme={theme}
-        onClick={onClick}
-        className={styles.left}
-        // style={{ width: 256, borderRadius: 20 }}
-        defaultOpenKeys={["sub1"]}
-        selectedKeys={[current]}
-        mode="inline"
-        items={items}
-      />
+      <div className={styles.left}>
+        <Menu
+          className={styles.menu}
+          theme={theme}
+          onClick={onClick}
+          defaultOpenKeys={["sub1"]}
+          selectedKeys={[current]}
+          mode="inline"
+          items={items}
+        />
+      </div>
       <div className={styles.right}>
         <Outlet />
       </div>

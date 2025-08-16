@@ -5,6 +5,8 @@ import FooterPage from "./footer";
 import MainContentPage from "./main";
 
 const LayoutProvider: React.FC = () => {
+  console.log("LayoutProvider");
+
   return (
     <Layout style={{ height: "100vh", backgroundColor: "#fff" }}>
       <HeaderPage />

@@ -1,0 +1,215 @@
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* 布局样式 */
+.app-layout {
+  min-height: 100vh;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 0;
+  height: auto;
+  line-height: 64px;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.logo-text {
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
+.tool-menu {
+  background: transparent;
+  border-bottom: none;
+}
+
+.tool-menu .ant-menu-item {
+  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 2px solid transparent;
+  margin-bottom: 0;
+}
+
+.tool-menu .ant-menu-item:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tool-menu .ant-menu-item-selected {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid white;
+}
+
+.app-content {
+  padding: 24px;
+  background-color: #f0f2f5;
+  height: calc(100vh - 120px);
+  overflow: hidden;
+}
+
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.app-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-text {
+  text-align: center;
+  margin: 0;
+  color: #666;
+}
+
+/* 工具栏样式 */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+/* 左右布局样式 */
+.split-layout {
+  display: flex;
+  gap: 16px;
+  height: calc(100% - 100px);
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.editor-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 工具组件样式 */
+.json-parser,
+.timestamp-converter,
+.json-to-ts-converter {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.parser-card,
+.converter-card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-card,
+.output-card,
+.result-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 编辑器样式 */
+.editor-container .monaco-editor {
+  flex: 1;
+  height: 100% !important;
+}
+
+/* 时间戳转换器特定样式 */
+.input-group,
+.format-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.result-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .split-layout {
+    flex-direction: column;
+    height: auto;
+    min-height: 600px;
+  }
+  
+  .left-panel, .right-panel {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    padding: 16px;
+    line-height: 1.5;
+  }
+  
+  .tool-menu {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .app-content {
+    padding: 16px;
+    height: auto;
+    min-height: calc(100vh - 200px);
+  }
+  
+  .toolbar {
+    flex-direction: column;
+  }
+  
+  .toolbar Button {
+    width: 100%;
+  }
+  
+  .input-group,
+  .format-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .input-group Input,
+  .format-group Select {
+    width: 100%;
+  }
+}

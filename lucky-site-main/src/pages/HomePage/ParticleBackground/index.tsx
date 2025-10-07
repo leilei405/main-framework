@@ -53,11 +53,13 @@ const ParticleBackground: React.FC = () => {
     ];
 
     for (let i = 0; i < numberOfParticles; i++) {
-      const radius = Math.random() * 1.5 + 0.5;
+      // 将粒子大小从原来的 0.5-2 增加到 1-3
+      const radius = Math.random() * 2 + 1;
       const x = Math.random() * (canvas.width - radius * 2) + radius;
       const y = Math.random() * (canvas.height - radius * 2) + radius;
-      const speedX = (Math.random() - 0.5) * 0.3;
-      const speedY = (Math.random() - 0.5) * 0.3;
+      // 将粒子速度从原来的 -0.15-0.15 增加到 -0.5-0.5
+      const speedX = (Math.random() - 0.5) * 1;
+      const speedY = (Math.random() - 0.5) * 1;
       const color = colors[Math.floor(Math.random() * colors.length)];
 
       particlesArray.push({ x, y, radius, color, speedX, speedY });
@@ -116,7 +118,7 @@ const ParticleBackground: React.FC = () => {
   }, []);
 
   return (
-    <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-10" />
+    <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-1" />
   );
 };
 

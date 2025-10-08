@@ -7,7 +7,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 const navItems = [
   { name: "首页", path: "/" },
   { name: "前端面试宝典", path: "/interview" },
-  { name: "小工具", path: "/tools" },
+  { name: "开发工具", path: "/tools" },
   { name: "博客", path: "/blog" },
   { name: "简历制作", path: "/resume" },
 ];
@@ -55,7 +55,7 @@ const HeaderPage: React.FC = () => {
   ];
 
   return (
-    <div className="sticky z-50 w-full top-0 left-0 right-0 h-[80px] px-8 flex justify-between items-center p-4 bg-slate-900">
+    <div className="sticky z-50 w-full top-0 left-0 right-0 h-[80px] px-8 flex justify-between items-center p-4 bg-[#060b12]">
       <div
         className="flex items-center justify-center gap-2 text-2xl font-bold cursor-pointer"
         onClick={goHome}

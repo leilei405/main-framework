@@ -1,8 +1,8 @@
 import { Dropdown, Space } from "antd";
 import type { MenuProps } from "antd";
 import { DownOutlined, LogoutOutlined, UserOutlined } from "@ant-design/icons";
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const navItems = [
   { name: "首页", path: "/" },
@@ -14,7 +14,13 @@ const navItems = [
 
 const HeaderPage: React.FC = () => {
   const navigate = useNavigate();
-  const [activePath, setActivePath] = React.useState(navItems[0].path);
+  const location = useLocation();
+  const [activePath, setActivePath] = useState(navItems[0].path);
+
+  // 添加useEffect监听路由变化，解决点击Card跳转后不选中的问题
+  useEffect(() => {
+    setActivePath(location.pathname);
+  }, [location.pathname]);
 
   const handleLogout = () => {
     navigate("/login");

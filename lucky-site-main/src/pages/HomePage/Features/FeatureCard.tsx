@@ -8,7 +8,7 @@ const FeatureCard: React.FC = () => {
   const features = [
     {
       icon: BookOpenIcon,
-      title: "前端面试宝典",
+      title: "面试宝典",
       description:
         "涵盖 HTML、CSS、JavaScript、TypeScript、React、Node.js、Nest 等全栈技术栈",
       href: "/interview",
@@ -18,7 +18,7 @@ const FeatureCard: React.FC = () => {
     },
     {
       icon: CodeIcon,
-      title: "开发小工具",
+      title: "开发工具",
       description: "JSON 格式化、JSON 转可视化依赖图、代码美化等实用工具",
       href: "/tools",
       borderColor: "border-cyan-500",
@@ -27,7 +27,7 @@ const FeatureCard: React.FC = () => {
     },
     {
       icon: BlogIcon,
-      title: "技术博客",
+      title: "技术文章",
       description:
         "分享前端开发经验、最佳实践和技术洞察、项目经验、个人成长记录",
       href: "/blog",
@@ -37,9 +37,9 @@ const FeatureCard: React.FC = () => {
     },
     {
       icon: ResumeIcon,
-      title: "简历模板",
+      title: "简历制作",
       description:
-        "提供专业的简历模板，帮助你快速展示自己的技能和经历、项目经验、个人成长记录",
+        "提供专业的简历模板，快速展示自己的技能和经历、项目经验、个人成长记录",
       href: "/resume",
       borderColor: "border-blue-500",
       glowColor: "rgba(59,130,246,0.5)",

@@ -6,7 +6,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 const navItems = [
   { name: "首页", path: "/" },
-  { name: "前端面试宝典", path: "/interview" },
+  { name: "面试宝典", path: "/interview" },
   { name: "开发工具", path: "/tools" },
   { name: "博客", path: "/blog" },
   { name: "简历制作", path: "/resume" },
@@ -63,7 +63,7 @@ const HeaderPage: React.FC = () => {
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-700 font-bold text-lg">
           FE
         </div>
-        <span>前端面试宝典</span>
+        <span>前端开发成长平台</span>
       </div>
       <div className="flex items-center justify-between gap-6">
         {navItems.map((item) => (

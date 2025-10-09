@@ -7,6 +7,10 @@ const LayoutPage = lazy(() => import("../layout"));
 const Home = lazy(() => import("../pages/HomePage"));
 /** 面试宝典 */
 const InterviewPage = lazy(() => import("../pages/InterviewPage"));
+/** 面试题详情 */
+const AnswerContent = lazy(
+  () => import("../pages/InterviewPage/AnswerContent")
+);
 /** 工具 */
 const ToolsPage = lazy(() => import("../pages/ToolsPage"));
 /** 博客 */
@@ -40,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "interview",
         element: <InterviewPage />,
+      },
+      {
+        path: "interview/:questionId",
+        element: <AnswerContent />,
       },
       {
         path: "tools",
